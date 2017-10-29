@@ -1,0 +1,254 @@
+
+body {
+  /*background: url(/static/image/walfHome.jpg) no-repeat;*/
+
+    /*background:#fff url(/static/image/walfHome.jpg) no-repeat center fixed;*/
+    /*height: auto;*/
+    /*-webkit-background-size: cover;*/
+	/*-moz-background-size: cover;*/
+	/*-o-background-size: cover;*/
+	/*background-size: cover;*/
+	/*!*color: rgba(255, 255, 255, .95)}*!*/
+
+}
+
+
+
+.form-group.blur{
+        border-color: #ccc;
+
+}
+
+.loginBox:hover,.box:hover{
+    border-color: #169fe6;
+    box-shadow: 0 0 5px #169fe6;
+}
+
+.form-group > label{
+    float:left;
+    width:65px;
+    height:20px;
+    line-height:20px;
+    margin-top:9px;
+
+    border-right:1px solid #eaeaea;
+    text-align:center;
+}
+
+
+.marb20{
+    margin-bottom:20px;
+}
+.marb8{
+    margin-bottom:8px;
+}
+.marb38{
+    margin-bottom:38px;
+}
+
+/*自定义BTN*/
+.form-group > img{
+    width: 50px;
+}
+
+.form-group .spaceHeight{
+    padding-bottom: 3px;
+    border:5px;
+    /*width: 100%;*/
+
+}
+input{
+    border:none;
+    outline:medium;
+    text-align: left;
+}
+.form-group > input{
+    float:left;
+
+    /*width:205px;*/
+    width: 56%;
+    line-height:24px;
+    padding:7px 10px;
+    border:0;
+    line-height:normal\9;
+    padding:12px 10px 9px\9;
+    position: relative;
+        overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+
+}
+
+
+.captcha1 > input{
+     width:60px;
+}
+.captcha1 > img{
+    float:right;
+    margin-top:5px;
+
+}
+.form-group .captcha{
+    cursor: pointer;
+        /*background-color: #ffffff;*/
+}
+
+#id_captcha_0 {
+
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+}
+
+.wrapper {
+  margin-top: 15%;
+  margin-bottom: 80px;
+  margin-left: 40%;
+  /*width: 150px;*/
+    height: 25%;
+ overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+.loginBox{
+        width: 100%;
+        height: 35px;
+    line-height: 30px;
+    text-align: left;
+        border: 1px solid #ccc;
+    margin: 15px 0;
+
+        border-radius: 3px;
+        background-color: #ffffff;
+        position: relative;
+       overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+.wrapper .box{
+    width: 100%;
+    height: 35px;
+    line-height: 30px;
+    text-align: left;
+    border: 1px solid #ccc;
+    margin: 15px 0;
+    border-radius: 3px;
+
+    background-color: #ffffff;
+    position: relative;
+
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+
+}
+
+.form-signin {
+  /*max-width: 350px;*/
+    width: 200px;
+  padding: 5px 30px 15px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.28) none repeat scroll !important;
+
+    position: fixed;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 20px;
+    text-align: center;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 15px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-sign in input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.error{
+    background: #fb8344;
+    color:#fff !important;
+    text-align: center;
+    width: 100%;
+    line-height: 15px !important;
+    margin:4px 0;
+    border-color: #fa1632;
+    border: 2px;
+    background: rgba(0, 0, 0, 0) none repeat scroll !important;
+}
+.error >ul >li{
+
+    list-style-type:none;
+
+}
+.error >ul{
+    padding:0;margin:0;
+}
+.fr{
+
+    float: right;
+}
+.btn{
+
+    background: #1b1b1b;
+    color:#fff !important;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    height: 35px;
+	font: bold 15px  Arial, sans-serif;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+/*红色警告边框*/
+.form-group.errorput{
+    border-color: #f00;
+    box-shadow: 0 0 5px #aa0b0b;
+}
+
+.errorput{
+        border-color: #f00;
+    box-shadow: 0 0 5px #aa0b0b;
+
+}
+
+.btn:hover {
+	-webkit-box-shadow: 1px 1px 1px rgba(255, 0, 242, 0.29), inset 0px 0px 2px rgba(255, 0, 242, 0.5);
+	-moz-box-shadow: 1px 1px 1px rgba(255, 0, 242, 0.29), inset 0px 0px 2px rgba(255, 0, 242, 0.5);
+	box-shadow: 1px 1px 1px rgba(255, 0, 242, 0.29), inset 0px 0px 2px rgba(255, 0, 242, 0.5);
+}
+.btn:active {
+
+
+	-webkit-box-shadow: inset 0px 0px 3px rgba(255, 19, 51, 0.8);
+	-moz-box-shadow: inset 0px 0px 3px rgba(238, 255, 218, 0.8);
+	box-shadow: inset 0px 0px 3px rgba(255, 19, 51, 0.8);
+}
+
+
+.reginster-box{
+
+    position:absolute;
+    top: 250px;
+    align-content: center;
+    left: 40%;
+    width: 220px;
+}
+/*注册相关css*/

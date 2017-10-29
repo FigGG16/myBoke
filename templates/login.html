@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Snippet: Login Form</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{#    <script src="{% static 'js/login.js' %}" type="text/javascript"></script>#}
+
+</head>
+
+    <body>
+
+
+        <div class="wrapper ">
+
+        <form class="form-signin" id="jsFindPwdForm" action="{% url 'login' %}" method="post" autocomplete="off">
+
+          <h2 class="form-signin-heading">FigGG Boke</h2>
+
+            <div class="loginBox form-group   spaceHeight marb20  {% if login_form.username %} errorput {% endif %}">
+
+            <label >账号</label>
+                    <input type="text"  name="username" id="account_l" placeholder="Email Address" required="" autofocus="" />
+            </div>
+
+            <div class="loginBox form-group  marb8  {% if login_form.password %} errorput {% endif %}">
+
+            <label >密码</label>
+                <input type="password"  name="password" id="password_l" placeholder="Password" required=""/>
+
+            </div>
+            {# ------------------------          验证码#}
+            <div class="loginBox form-group captcha1 {% if login_form.errors.captcha %}  errorput {% endif %}"  >
+
+                <label >Code</label>
+                    {{ loginCaptch.captcha }}
+            </div>
+            {# ------------------------end         验证码#}
+
+
+            <div class="error btns login-form-tips " id="jsLoginTips">{% for key, error in login_form.errors.items%}{{ error }}{% endfor %}{{ msg }}</div>
+
+          <label class="checkbox">
+            <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+          </label>
+
+            <div class=" ">
+                <a  href="{% url 'register' %}">注册账号</a>
+                <a class="fr" href="{% url 'forget_pwd' %}">忘记密码？</a>
+            </div>
+
+
+            <input class="btn btn-green" id="jsLoginBtn" type="submit" value="登录" />
+
+
+            {% csrf_token %}
+
+        </form>
+      </div>
+
+
+
+
+        <script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/unslider.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/login.js' %}"  type="text/javascript"></script>
+    {#        刷新验证码--end#}
+        <script src="{% static 'js/jquery.backstretch.min.js' %}"  type="text/javascript"></script>
+    {#    背景轮播图--end#}
+
+<script>
+    $.backstretch([
+      "{% static 'image/new-york.jpg' %}",
+      "{% static 'image/city.jpg' %}",
+        "{% static 'image/tokyo-japanese.jpg' %}",
+
+      ], {
+        fade: 750,
+        duration: 4000
+    });
+</script>
+</body>
+
+
+</html>
+
+
+
+
+

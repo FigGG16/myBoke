@@ -1,0 +1,412 @@
+{% extends 'Art_main_list.html' %}
+
+{% load staticfiles %}
+
+{% block title %}我的文章{% endblock %}
+
+{% block custom_css %}
+
+        <link rel="stylesheet" href="{% static 'css/art_detail.css' %}">
+{#      CK富文本高亮#}
+       <script type="text/javascript" src="/static/media/ueditor/highlight.pack.js"></script>
+       <link type="text/css" rel = "stylesheet" href="/static/media/ueditor/styles/default.css">
+
+{#        <script type="text/javascript" src="/static/js/anchor.js"></script>#}
+
+        <script>hljs.initHighlightingOnLoad()</script>
+
+    <script></script>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+     <div id="post_detail">
+
+                            <!--done-->
+                            <div id="topics">
+                                        <div class="post">
+                                        <h1 class="postTitle">
+                                                        <a id="cb_post_title_url" class="postTitle2" href="#">{{ Artcles_Detail.title }}</a>
+                                         </h1>
+                                        <div class="post-meta text-muted text-small top-gap">
+
+                                            <span>{{ Artcles_Detail.created_time|timesince }}</span>
+                                            <span>字数 {{ Artcles_Detail.body|length }}</span>
+                                            <span>阅读 10770</span>
+                                            <span>评论 {{ all_comments.count }}</span>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <div class="postBody">
+                                        <div id="cnblogs_post_body">
+
+                                                            {{ Artcles_Detail.formatted_markdown|safe }}
+                                                            <div id="blog_post_info_block">
+                                                            <div id="BlogPostCategory">分类: <a href="#" target="_blank">{{ Artcles_Detail.get_cate_name }}</a></div>
+
+
+                                                                <div id="author_profile">
+                                                                <div id="author_profile_info" class="author_profile_info">
+                                                                        <a href="#" target="_blank"><img src="{% static 'image/TusiJI.jpg' %}" class="author_avatar" alt=""></a>
+                                                                    <div id="author_profile_detail" class="author_profile_info">
+                                                                        <a href="#">黄飞翔</a><br>
+{#                                                                        <a href="http://home.cnblogs.com/u/zhenbianshu/followees">关注 - {{ Artcles_Detail.views }}</a><br>#}
+{#                                                                        <a href="http://home.cnblogs.com/u/zhenbianshu/followers">粉丝 - {{ Artcles_Detail.likes }}</a>#}
+                                                                    </div>
+                                                                </div>
+                                                                <div class="clear"></div>
+                                                                <div id="author_profile_honor"></div>
+                                                                </div>
+
+
+                                                            <div id="post_next_prev">
+
+                                                             {% if pre_Artcles %}
+                                                                <a href="{% url 'CateN:category_detail' pre_Artcles.id %}" class="p_n_p_prefix">« </a>上一篇：
+                                                                <a href="{% url 'CateN:category_detail' pre_Artcles.id %}" title="发布于2017-06-21 20:31">{{ pre_Artcles.title }}</a><br>
+
+                                                            {% endif %}
+
+                                                               {% if next_Artcles %}
+                                                                <a href="{% url 'CateN:category_detail' next_Artcles.id %}" class="p_n_p_prefix">» </a>下一篇：
+
+                                                                <a href="{% url 'CateN:category_detail' next_Artcles.id %}" title="发布于2017-07-17 20:29">{{ next_Artcles.title }}</a><br>
+                                                               {% endif %}
+                                                           </div>
+
+
+
+
+
+                                                        </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div><!--end: topics 文章、评论容器-->
+                            </div>
+
+                            <div class="divSpace"></div>
+                            <div id="blog-comments-placeholder">
+                            <div id="comments_pager_top"></div>
+                            <div class="feedback_area_title">评论列表</div>
+                            <div class="feedbackNoItems"></div>
+
+                            {% for comment in all_comments %}
+                                <div class="feedbackItem">
+                                        <div class="feedbackListSubtitle">
+
+                                            {% if request.user.is_authenticated %}
+                                            <div class="feedbackManage">
+                &nbsp;&nbsp;
+                                                <span class="comment_actions">
+                                                    <a href="javascript:void(0);" onclick="return ReplyComment({{ comment.id }},{{ comment.user.username|mySafe}})",class="replery23">回复</a>&nbsp;&nbsp;
+                                                    <a href="javascript:void(0);" onclick="return QuoteComment(3652956,5)">引用</a>
+
+                                                </span>
+
+                                            </div>
+                                            {% endif %}
+
+                                            <a href="#3733120" class="layer">#{{ forloop.counter }}楼</a><a name="3733120" id="comment_anchor_3733120"></a>  <span class="comment_date">{{ comment.add_time }}</span> <a id="a_comment_author" href="#" target="_blank">{{ comment.user.username }}</a> <a href="#" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+
+                                        </div>
+
+                                        <div class="feedbackCon">
+                                            <div id="comment_body_3733120" class="blog_comment_body">{{ comment.comments|safe }}</div><div class="comment_vote"><a href="javascript:void(0);" class="collection_Digg comment_digg" curr_coment_id="{{ comment.id }}">支持({{ comment.get_Comment_Digg_count }})</a></div><span id="comment_3733120_avatar" style="display:none;">http://pic.cnblogs.com/face/995377/20160720112558.png</span>
+                                        </div>
+                            </div>
+                            {% endfor %}
+                            <div id="comments_pager_bottom"></div>
+                            </div>
+
+                            <div class="divSpace"></div>
+
+
+
+                    <div id="comment_form_container">
+
+                         <!--发布评论-->
+                        {% if request.user.is_authenticated %}
+                            <div id="js-pub-container" class="issques clearfix js-form">
+                                     <div id="commentform_title">发表评论</div>
+                                     <span id="tip_comment" style="color:Red"></span>
+                                     <p>
+                                    昵称：<input type="text" id="tbCommentAuthor" class="author" disabled="disabled" size="50" value="{{ request.user.username }}">
+                                    </p>
+
+                                    <div class="wgt-ipt-wrap pub-editor-wrap" id="js-pl-input-fake">
+                                        <div class="commentbox_title">
+                                                        <div class="commentbox_title_left">评论内容：</div>
+                                                        <div class="commentbox_title_right">
+                                                                    <img id="ubb_quote" class="comment_icon" src="{% static 'image/quote.gif' %}" alt="引用" title="添加引用" onclick="insertUBB('tbCommentBody','quote')">
+                                                                    <img id="ubb_bold" class="comment_icon" src="{% static 'image/b.png' %}" alt="粗体" title="添加粗体" onclick="insertUBB('tbCommentBody','b')">
+                                                                    <img id="ubb_url" class="comment_icon" src="{% static 'image/lk.png' %}" alt="链接" title="添加链接" onclick="insertUbbUrl('tbCommentBody')">
+                                                                    <img id="ubb_indent" class="comment_icon" src="{% static 'image/indent.png' %}" alt="缩进" title="添加首行缩进" onclick="insertIndent('tbCommentBody')">
+                                                                    <img id="ubb_code" class="comment_icon" src="{% static 'image/insertCode.gif' %}" alt="代码" title="添加代码" onclick="insertUbbCode()">
+                                                                    <img id="ubb_img" class="comment_icon" src="{% static 'image/img.gif' %}" alt="图片" title="上传图片" onclick="OpenImageUploadWindow();">
+                                                                </div>
+                                                            评论的其他功能，没有实现
+                                                    </div>
+                                        <textarea id="js-pl-textarea" class="comment_textarea" placeholder="扯淡、吐槽、表扬、鼓励……想说啥就说啥！" ></textarea>
+                                    </div>
+
+                                    <input type="button" id="js-pl-submit" class="pub-btn" data-cid="452" value="发表评论">
+                                    <p class="global-errortip js-global-error" id="before-side"></p>
+                            </div>
+
+                        {% else %}
+        {#                    ----未登录不能评论#}
+                            <div id="NoLogin">
+                             <div class="login_tips">注册用户登录后才能发表评论，请
+                        <a rel="nofollow" href="/login/" class="underline" onclick="return login('commentform');">登录</a> 或
+                        <a rel="nofollow" href="/register/" class="underline" onclick="return register();">注册</a>，
+                        <a href="#">访问</a>网站首页。
+                             </div>
+                    </div>
+
+                        {% endif %}
+                    </div>
+
+     </div>
+
+{% endblock %}
+
+
+ {% block right_view %}
+
+       <div class="blog-aside col-md-4 ">
+
+        <div class="aside-widget">
+       <section class="">
+            <h3>文章目录</h3>
+            <div class="text-small table-of-content">
+                <div class="toc">
+                <ul>
+                    {% for List in Article_list %}
+                <li><a href="#{{ List|cut:'#' }}">{{ List|cut:'#' }}</a></li>
+
+                    {% endfor %}
+
+                </ul>
+                </div>
+
+            </div>
+        </section>
+        </div>
+       </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+{% block custom_jsTwo %}
+
+<script type="text/javascript">
+    //添加评论
+    $('#js-pl-submit').on('click', function(){
+        var comments = $("#js-pl-textarea").val()
+        if(comments == ""){
+            alert("评论不能为空")
+            return
+        }
+        $.ajax({
+            cache: false,
+            type: "POST",
+            url:"{% url 'CateN:add_comments'%}",
+
+            data:{'Artcles_Detail_id':{{Artcles_Detail.id}}, 'comments':comments},
+            async: true,
+            beforeSend:function(xhr, settings){
+                xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+            },
+            success: function(data) {
+                if(data.status == 'fail'){
+                    if(data.msg == '用户未登录'){
+                        window.location.href="/login/";
+                    }else{
+                        alert(data.msg)
+                    }
+
+                }else if(data.status == 'success'){
+                    window.location.reload();//刷新当前页面.
+                }
+            },
+        });
+    });
+</script>
+
+<script >
+
+ $(document).ready(function () {
+            $('.post table').wrap('<div class="scroll-view"></div>').addClass('table');
+            function showSidebar() {
+                var $sidebar = $('#sidebar');
+                $('.musk').fadeIn();
+                $sidebar
+                    .removeClass()
+                    .css({
+                        'left': -$sidebar.outerWidth(),
+                        'position': 'fixed'
+                    })
+                    .addClass('sidebar-on-mobile scroll-view')
+                    .animate({'left': 0}, 300);
+            }
+
+            function hideSidebar() {
+                var $sidebar = $('#sidebar');
+                $('.musk').fadeOut();
+                $sidebar.animate({'left': -$sidebar.outerWidth()}, 300);
+            }
+
+            $('#menu-btn').on('click', showSidebar);
+            $('.musk').on('click', hideSidebar);
+
+            $('.comment-form textarea').removeAttr('cols').removeAttr('rows')
+        })
+</script>
+
+<script type="text/javascript">
+    //收藏分享
+function add_fav(current_elem, fav_id, fav_type){
+
+    $.ajax({
+        cache: false,
+        type: "POST",
+        url:"{% url 'CateN:add_fav' %}",
+        data:{'fav_id':fav_id, 'fav_type':fav_type},
+        async: true,
+        beforeSend:function(xhr, settings){
+            xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+        },
+        success: function(data) {
+            if(data.status == 'fail'){
+                if(data.msg == '用户未登录'){
+                    window.location.href="/login/";
+                }else{
+                    alert(data.msg)
+                }
+            }else if(data.status == 'success'){
+
+                if(data.msg=='已支持')
+                {
+                      current_elem.text("支持("+eval( parseInt(current_elem.text().replace(/[^0-9]/ig,""))   +1)+")")
+{#                    voto.text("888888888")#}
+
+                }
+
+                else if(data.msg=='取消支持')
+                {
+                      current_elem.text("支持("+eval(current_elem.text().replace(/[^0-9]/ig,"")-1)+")")
+{#                    voto.text("888888888")#}
+                }
+
+{#                current_elem.children(a).text()#}
+
+            }
+        },
+    });
+}
+
+
+
+$('.collection_Digg').on('click', function(){
+{#                        第二个元素获取属性中的属性值#}
+    add_fav($(this),$(this).attr('curr_coment_id'), 1);
+});
+
+
+
+function ReplyComment(click_Comment_id,click_Comment_userName)
+{
+
+    var parent=document.getElementById("js-pub-container");
+    {#    父节点#}
+
+    var beforeNode=document.getElementById("before-side");
+    {#    位置节点#}
+
+    var zhi=document.getElementById("js-pl-submit");
+    var clone = zhi.cloneNode(true);
+    clone.id="huang";
+    clone.setAttribute("click_Comment_id",click_Comment_id);
+    parent.insertBefore(clone,beforeNode);
+
+
+    $('#js-pl-submit').remove();
+    {#    拷贝发表节点，修改ID值，剔除旧节点，添加新节点#}
+
+    $('#huang').on('click',function(){
+
+        var click_Comment_id= $(this).attr('click_Comment_id')
+
+
+
+        var comments = $("#js-pl-textarea").val()
+        if(comments == ""){
+            alert("评论不能为空")
+            return
+        }
+        $.ajax({
+            cache: false,
+            type: "POST",
+            url:"{% url 'CateN:add_comments'%}",
+
+            data:{'Artcles_Detail_id':{{Artcles_Detail.id}},'click_Comment_id':click_Comment_id,'comments':comments},
+            async: true,
+            beforeSend:function(xhr, settings){
+                xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+            },
+
+            success: function(data) {
+                if(data.status == 'fail'){
+                    if(data.msg == '用户未登录'){
+                        window.location.href="/login/";
+                    }else{
+                        alert(data.msg)
+                    }
+
+                }else if(data.status == 'success'){
+                    window.location.reload();//刷新当前页面.
+                }
+            },
+        });
+    });
+    {#    函数嵌套回复评论作者的评论#}
+
+
+    var i=$("#a_comment_author_").text();
+
+    return $(".comment_textarea").focus(),
+           $(".comment_textarea").val($(".comment_textarea").val()+"@"+click_Comment_userName+"\r\n"),
+           !1
+    {#    回到输入文本框#}
+}
+
+function SetReplyComment(current_elem){
+
+    current_elem.text("88888")
+    $(".comment_textarea").focus()
+
+}
+
+$('.replery23').on('click',function(){
+
+
+    ReplyComment(click_Comment_id,click_Comment_userName);
+
+});
+
+
+
+</script>
+
+{% endblock %}
+
+{#ajax实现评论#}

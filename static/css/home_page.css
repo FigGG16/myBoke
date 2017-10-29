@@ -1,0 +1,287 @@
+.day{background:#fff;padding:20px;
+    padding-left: 0px;
+
+    border:1px solid #dedede;
+    border-left: none;
+    border-right: none;
+
+    margin-right: 15px;
+    margin-left: 20px;
+
+    margin-bottom:-1px}
+
+.day:hover{border:1px solid #ff5e52;position:relative;z-index:10;
+            border-left: none;
+    border-right: none;
+}
+
+.day:hover .postSeparator{border-top:1px dashed #169fe6}
+
+.dayTitle{
+    color:#fff;background-color: #000000;padding:3px 6px;font-size:15px;display:block;float:left;margin-right:10px;
+    border-radius:6px;
+
+    z-index:10px}
+
+.dayTitle:hover{background-color:#ff5e52}
+
+.dayTitle a{color:#fff}
+
+.day .postTitle2{color:#555}
+
+.day .postTitle{font-size:21px;line-height:1.5em;float:left;clear:right}
+
+.postTitle2 span{
+
+    color:#ff5e52
+}
+
+.postCon p{}
+
+.postCon a:link
+{
+    text-decoration:none;color:#9ab26b
+
+}
+
+.postCon{padding:10px 0;clear:both}
+
+
+#nav_next_page{line-height:40px}
+
+#nav_next_page a:hover{
+
+
+      background-color:#ff5e52
+}
+
+#nav_next_page a{
+    -webkit-border-radius:3px;
+
+    -moz-border-radius:3px;
+
+    border-radius:6px;background-color: #000000;
+
+    -webkit-box-shadow:0 0 1px rgba(0,0,0,.1),0 1px 1px rgba(0,0,0,.09);
+
+    -moz-box-shadow:0 0 1px rgba(0,0,0,.1),0 1px 1px rgba(0,0,0,.09);
+
+    box-shadow:0 0 1px rgba(0,0,0,.1),0 1px 1px rgba(0,0,0,.09);
+
+    height:40px;line-height:40px;
+
+    color:#fff;display:inline-block;
+
+    padding:0 15px;text-decoration:none}
+
+.topicListFooter{text-align:right;margin-right:10px;margin-top:10px}
+.topicListFooter{margin-top:15px;height:68px;line-height:68px;font-size:16px}
+
+.topicListFooter .pager a:hover,.topicListFooter .pager span{
+
+    -webkit-border-radius:3px;
+
+    -moz-border-radius:3px;
+
+    border-radius:6px;
+
+     background-color:#ff5e52;
+
+    -webkit-box-shadow:0 0 1px rgba(0,0,0,.1),0 1px 1px rgba(0,0,0,.09);-moz-box-shadow:0 0 1px rgba(0,0,0,.1),0 1px 1px rgba(0,0,0,.09);box-shadow:0 0 1px rgba(0,0,0,.1),0 1px 1px rgba(0,0,0,.09);height:40px;line-height:40px;margin-top:14px;color:#fff;display:inline-block;padding:0 15px;text-decoration:none;border:none}
+
+
+.topicListFooter .pager a:hover,.topicListFooter .pager span{
+
+    -webkit-border-radius:3px;
+
+    -moz-border-radius:3px;
+
+    border-radius:6px;
+
+     background-color:#ff5e52;
+
+    -webkit-box-shadow:0 0 1px rgba(0,0,0,.1),0 1px 1px rgba(0,0,0,.09);-moz-box-shadow:0 0 1px rgba(0,0,0,.1),0 1px 1px rgba(0,0,0,.09);box-shadow:0 0 1px rgba(0,0,0,.1),0 1px 1px rgba(0,0,0,.09);height:40px;line-height:40px;margin-top:14px;color:#fff;display:inline-block;padding:0 15px;text-decoration:none;border:none}
+
+.Top_Article{
+
+}
+
+/*.topicListFooter a{border: 1px grey solid}*/
+
+.pager{font-size:12px;margin:10px 0;text-align:center;color:#2e6ab1;line-height:200%}
+
+.pager a{border:1px solid #9aafe5;color:#2e6ab1;margin:0 2px;padding:2px 5px;text-decoration:none}
+
+.pager span.current{background-color:#2e6ab1;border:1px solid navy;color:#fff;font-weight:bold;margin:0 2px;padding:2px 5px}
+#myposts .pager{text-align:right;margin-right:10px}
+
+.topicListFooter,.divSpace{text-align:right;margin-right:10px;margin-top:10px}
+
+/*.pager .active{*/
+
+    /*border:0px;*/
+    /*-webkit-user-select:none;*/
+    /*-moz-user-select:none;*/
+    /*-ms-user-select:none;*/
+    /*user-select:none;*/
+/*}*/
+
+.pageturn {
+    clear: both;
+    height: 30px;
+    margin: 50px auto;
+    display: table;
+    text-align: center;
+}
+
+.pageturn .pagelist {
+    display: table-cell;
+    /*vertical-align: middle;*/
+    overflow: hidden;
+
+
+}
+.pageturn .pagelist :hover,ul:hover{
+    vertical-align: bottom;
+
+
+}
+.pageturn li {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+    float: left;
+    /*text-align: center;*/
+
+    list-style: none;
+  /*margin: 0;*/
+  padding-left: 0;
+}
+
+.pageturn ul{
+
+    border: 2px red solid;
+    height: 70px;
+    /*text-align: center;*/
+    /*align-content: center;*/
+}
+
+
+
+
+.pageturn li:first-child {
+    margin-left: 0;
+}
+
+.pageturn li:hover a, .pageturn .active a {
+    /*background:#9ab26b;*/
+    color: #fff;
+    border-color: #eaeaea;
+    /*-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;*/
+
+    -webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#9ab26b;-webkit-box-shadow:0 0 1px rgba(0,0,0,.1),0 1px 1px rgba(0,0,0,.09);-moz-box-shadow:0 0 1px rgba(0,0,0,.1),0 1px 1px rgba(0,0,0,.09);box-shadow:0 0 1px rgba(0,0,0,.1),0 1px 1px rgba(0,0,0,.09);height:40px;line-height:40px;color:#fff;display:inline-block;text-decoration:none;border:none;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
+
+    margin-bottom:-10px;
+}
+
+.pageturn a {
+    border: 1px solid #eaeaea;
+    display: block;
+    height: 28px;
+    color: #6c6c6c;
+}
+
+.pageturn .long {
+    width: 100px;
+}
+
+.pageturn .none a {
+    border: 0;
+}
+    /*-------分页*/
+
+
+/*------------------头部部分的个人详情*/
+.widget ul li {
+border-bottom: 1px dotted #bead7f;
+}
+
+.post, .sidebar-container .widget {
+border-bottom: 1px dotted #253944;
+}
+
+#header-widget-area .widget {
+color: #fff;
+}
+.widget table#wp-calendar {
+width: 100%;
+}
+
+.sidebar-container .widget {
+padding-bottom: 10px;
+position: relative;
+overflow: visible;
+}
+
+.widget {
+margin: 0 0 15px 0;
+}
+
+#before-content .widget {
+width: 100%;
+margin: 30px auto 0 auto;
+}
+
+#brief{
+    font-size: 20px;padding-top:5px;padding-bottom:5px;
+    line-height:1.7;
+    font-family: Merriweather, 冬青黑体简体中文, "Microsoft YaHei", 微软雅黑, SimSun, 宋体, Heiti, 黑体, droid_sansregular, arial, serif;
+}
+
+    #brief{
+        font-size: 18px;padding:0px 16px;
+    }
+
+
+ #brief{
+    font-size: 20px;padding-top:5px;padding-bottom:5px;
+    line-height:1.7;
+    font-family: Merriweather, 冬青黑体简体中文, "Microsoft YaHei", 微软雅黑, SimSun, 宋体, Heiti, 黑体, droid_sansregular, arial, serif;
+}
+
+/* catch-me */
+.catch-me{
+	text-align:center;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+.chaffle{
+
+    border-bottom: 1px black dashed;
+
+}
+
+/*------------------头部部分的个人详情END*/
+
+
+
+
+.home_icon{
+
+    margin: 5px 20px 5px 0px;
+    display: block;
+    /*margin-right: 20px;*/
+    /*margin-left: 100px;*/
+    float: right;
+
+    height: 35px;
+    width:  40px;
+
+}

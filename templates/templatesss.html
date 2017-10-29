@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/art_detail.css' %}">
+
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="{% static 'css/font-awesome/css/font-awesome.min.css' %}">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static 'css/style_index.css' %}" id="theme-styles">
+
+
+
+    <!--[if lt IE 9]>
+        <script src="js/vendor/google/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+
+<body>
+
+    <header>
+        <div class="widewrapper masthead ">
+
+            <img src="{% static 'image/bg1.jpg' %}" >
+
+        </div>
+        <div class="widewrapper subheader">
+            <div class="container ">
+                <div class="clean-breadcrumb">
+                    <ul id="navList">
+
+                        <li>
+                            <a href="#">首页</a>
+                        </li>
+
+                        <li>
+                            <a href="#">新随笔</a>
+                        </li>
+
+                        <li>
+                            <a href="#">联系</a>
+                        </li>
+                         <li>
+                            <a href="#">留言板</a>
+                        </li>
+
+
+                        </ul>
+
+                </div>
+
+                <div class="clean-searchbox">
+                    <form action="#" method="get" accept-charset="utf-8">
+                        <input class="searchfield" id="searchbox" type="text" placeholder="Search">
+                        <button class="searchbutton" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+{#            头部部分--------------end#}
+
+
+    <div class="my-color">
+
+                <div id="main">
+
+                    <div id="mainContent">
+                        <div class="forFlow">
+
+                            <div id="post_detail">
+
+                            <!--done-->
+                                    <div id="topics">
+                                        <div class="post">
+                                        <h1 class="postTitle">
+                                                        <a id="cb_post_title_url" class="postTitle2" href="#">Linux - 请允许我静静地后台运行</a>
+                                                    </h1>
+                                        <div class="clear"></div>
+                                        <div class="postBody">
+                                                            <div id="cnblogs_post_body"><style>h1,h2,h3,h4,h5,h6,p,blockquote { margin: 0; padding: 0 }
+                                                            body { font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif; font-size: 14px; line-height: 22px; color: #737373; background-color: white; margin: 10px 13px 10px 13px }
+                                                            .buryit { display: none !important }
+                                                            #author_profile_follow { position: fixed !important; right: 300px !important; bottom: 100px !important }
+                                                            .diggit { position: fixed !important; right: 300px !important; bottom: 40px !important }
+                                                            table { margin: 10px 0 15px 0; border-collapse: collapse }
+                                                            td,th { border: 1px solid #ddd; padding: 3px 10px }
+                                                            th { padding: 5px 10px }
+                                                            a { color: #0069d6 }
+                                                            a:hover { color: #0050a3; text-decoration: none }
+                                                            a img { border: none }
+                                                            p { margin-bottom: 9px }
+                                                            h1,h2,h3,h4,h5,h6 { color: #404040; line-height: 36px }
+                                                            h1 { margin-bottom: 18px; font-size: 30px }
+                                                            h2 { font-size: 24px }
+                                                            h3 { font-size: 18px }
+                                                            h4 { font-size: 16px }
+                                                            h5 { font-size: 14px }
+                                                            h6 { font-size: 13px }
+                                                            hr { margin: 0 0 19px; border: 0; border-bottom: 1px solid #ccc }
+                                                            blockquote { padding: 13px 13px 21px 15px; margin-bottom: 18px; font-family: georgia, serif; font-style: italic }
+                                                            blockquote::before { content: "“"; font-size: 40px; margin-left: -10px; font-family: georgia, serif; color: #eee }
+                                                            blockquote p { font-size: 14px; font-weight: 300; line-height: 18px; margin-bottom: 0; font-style: italic }
+                                                            code,pre { font-family: Monaco, Andale Mono, Courier New, monospace }
+                                                            code { background-color: #fee9cc; color: rgba(0, 0, 0, 0.75); padding: 1px 3px; font-size: 14px }
+                                                            pre { display: block; padding: 14px; margin: 0 0 18px; line-height: 16px; font-size: 11px; border: 1px solid #d9d9d9; white-space: pre-wrap }
+                                                            pre code { background-color: #fff; color: #737373; font-size: 13px; padding: 0 }
+                                                            sup { font-size: 0.83em; vertical-align: super; line-height: 0 }
+                                                            kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: #555; vertical-align: middle; background-color: #fcfcfc; border: solid 1px #ccc; border-bottom-color: #bbb }
+                                                            * { }</style>
+                                                            <style>code[class*="language-"],pre[class*="language-"] { color: black; background: none; font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace; text-align: left; white-space: pre; word-spacing: normal; line-height: 1.5 }
+                                                            pre[class*="language-"] { position: relative; margin: .5em 0; border-left: 10px solid #358ccb; background-color: #fdfdfd; background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%); overflow: visible; padding: 0 }
+                                                            code[class*="language"] { max-height: inherit; height: 100%; padding: 0 1em; display: block; overflow: auto }
+                                                            :not(pre)>code[class*="language-"],pre[class*="language-"] { background-color: #fdfdfd; margin-bottom: 1em }
+                                                            :not(pre)>code[class*="language-"] { position: relative; padding: .2em; color: #c92c2c; border: 1px solid rgba(0, 0, 0, 0.1); display: inline; white-space: normal }
+                                                            pre[class*="language-"]::before,pre[class*="language-"]::after { content: ""; z-index: -2; display: block; position: absolute; bottom: 0.75em; left: 0.18em; width: 40%; height: 20%; max-height: 13em }
+                                                            :not(pre)>code[class*="language-"]::after,pre[class*="language-"]::after { right: 0.75em; left: auto }
+                                                            .token.comment,.token.block-comment,.token.prolog,.token.doctype,.token.cdata { color: #7D8B99 }
+                                                            .token.punctuation { color: #5F6364 }
+                                                            .token.property,.token.tag,.token.boolean,.token.number,.token.function-name,.token.constant,.token.symbol,.token.deleted { color: #c92c2c }
+                                                            .token.selector,.token.attr-name,.token.string,.token.char,.token.function,.token.builtin,.token.inserted { color: #2f9c0a }
+                                                            .token.operator,.token.entity,.token.url,.token.variable { color: #a67f59; background: rgba(255, 255, 255, 0.5) }
+                                                            .token.atrule,.token.attr-value,.token.keyword,.token.class-name { color: #1990b8 }
+                                                            .token.regex,.token.important { color: #e90 }
+                                                            .language-css .token.string,.style .token.string { color: #a67f59; background: rgba(255, 255, 255, 0.5) }
+                                                            .token.important { font-weight: normal }
+                                                            .token.bold { font-weight: bold }
+                                                            .token.italic { font-style: italic }
+                                                            .token.entity { cursor: help }
+                                                            .namespace { opacity: .7 }
+                                                            .token.tab:not(:empty)::before,.token.cr::before,.token.lf::before { color: #e0d7d1 }
+                                                            pre[class*="language-"].line-numbers { padding-left: 0 }
+                                                            pre[class*="language-"].line-numbers code { padding-left: 3.8em }
+                                                            pre[class*="language-"].line-numbers .line-numbers-rows { left: 0 }
+                                                            pre[class*="language-"][data-line] { padding-top: 0; padding-bottom: 0; padding-left: 0 }
+                                                            pre[data-line] code { position: relative; padding-left: 4em }
+                                                            pre .line-highlight { margin-top: 0 }</style>
+                                                            <style>pre.line-numbers { position: relative; padding-left: 3.8em; counter-reset: linenumber }
+                                                            pre.line-numbers>code { position: relative }
+                                                            .line-numbers .line-numbers-rows { position: absolute; top: 0; font-size: 100%; left: -3.8em; width: 3em; letter-spacing: -1px; border-right: 1px solid #999 }
+                                                            .line-numbers-rows>span { display: block; counter-increment: linenumber }
+                                                            .line-numbers-rows>span::before { content: counter(linenumber); color: #999; display: block; padding-right: 0.8em; text-align: right }</style>
+                                                            <p>&nbsp;</p>
+                                                            <h1 id="toc_0">前言</h1>
+                                                            <p>常在 linux 下玩耍的开发者肯定会经常遇到需要对进程调度的情况，在 windows 中点击 <code>最小化</code> 去干别的就 OK 了，那么在 linux 下怎么办呢。</p>
+                                                            <p>可能有的小伙伴会说，再开一个终端窗口不就好了么。可是开很多窗口管理会很不方便，还有万一手贱点了x，或者长时间不操作，远程终端断开了连接，进程停止了，再次打开，又是一番折腾。</p>
+                                                            <p>今天来介绍几个命令，帮大家系统地梳理一下 linux 的进程调度，并附上一些自己的使用心得和踩过的坑。</p>
+                                                            <h1 id="toc_1">名词</h1>
+                                                            <p>在此之前，我们必须（当然也不是必须，但了解原理有利于理解和解决错误）先弄懂几个名词。</p>
+                                                            <h3 id="toc_2">进程组</h3>
+                                                            <p>进程组是一个或多个进程的集合，进程组方便了对多个进程的控制，在进程数较多的情况下，向进程组发送信号就行了。</p>
+                                                            <p>它的 ID 由它的组长进程的进程 ID 决定。组长进程创建了进程组，但它并不能决定进程组的存活时间，只要进程组内还有一个进程存在，进程就存在，与组长进程是否已终止无关。</p>
+                                                            <h3 id="toc_3">会话</h3>
+                                                            <p>会话(session)是一个或多个进程组的集合，它开始于用户登陆终端，结束于用户退出登陆。其义如其名，就是指用户与系统的一次对话的全程。</p>
+                                                            <p>会话包括控制进程（与终端建立连接的领头进程），一个前台进程组和任意后台进程组。一个会话只能有一个控制终端，通常是登录到其上的终端设备或伪终端设备，产生在控制终端上的输入和信号将发送给会话的前台进程组中的所有进程。</p>
+                                                            <h3 id="toc_4">控制终端</h3>
+                                                            <p>每当我们使用终端工具打开一个本地或远程 shell，我们便打开了一个控制终端，通过 <code>ps</code> 命令可以查看到 command 为 <code>ttyn</code> 的就是它对应的进程了，同时它对应 linux <code>/dev/</code> 目录下的一个文件。</p>
+                                                            <h3 id="toc_5">作业</h3>
+                                                            <p>作业的概念与进程组类似，同样由一个或多个进程组成，它分为前台作业和后台作业，一个会话会有一个前台作业和多个后台作业，与进程组不同的是，作业内的某个进程产生的子进程并不属于这个作业。</p>
+                                                            <h3 id="toc_6">类比</h3>
+                                                            <p>以上几个概念可以类比为我们一次通过 QQ 聊天的全程，控制终端就是 QQ软件，关闭了此软件代表着聊天结束。聊天时发送的每一条信息都是一个进程，作业或进程组就是我们在聊的某一件事，它由很多条相互的信息构成。而会话则是我们指我们从开始聊天到结束聊天的全过程，可能会聊很多个事。</p>
+                                                            <p>它们之间的相关图如下所示：</p>
+                                                            <p><img src="./Linux - 请允许我静静地后台运行 - 枕边书 - 博客园_files/819496-20170711201959759-960449906.png" alt=""></p>
+                                                            <h1 id="toc_7">后台执行</h1>
+                                                            <p>我们每次在终端窗口执行命令的时候，进程总会一直占用着终端，走到进程结束，这段时间内，我们在终端的输入是没有用的。而且，当终端窗口关闭或网络连接失败后，再次打开终端，会发现进程已经中断了。这是因为用户注销或者网络断开时，<code>SIGHUP</code>信号会被发送到会话所属的子进程，而此 <code>SIGHUP</code> 的默认处理方式是终止收到该信号的进程。所以若程序中没有捕捉该信号，当终端关闭后，会话所属进程就会退出。</p>
+                                                            <p>我们要实现后台执行的目的，实际上是要完成如下两个目标：</p>
+                                                            <ul>
+                                                            <li>使进程让出前台终端，让我们可以继续通过终端与系统进行交互。</li>
+                                                            <li>使进程不再受终端关闭的影响，即系统在终端关闭后不再向进程发送 <code>SIGHUP</code> 信号或即使发送了信号程序也不会退出。</li>
+                                                            </ul>
+                                                            <p>以下的命令就围绕着这两个目标来实现。</p>
+                                                            <h3 id="toc_8">&amp;</h3>
+                                                            <p>首先是我们最经常遇到的符号 <code>&amp;</code>，将它附在命令后面可以使进程在后台执行，不会占用前台界面。它实际上是在会话中开启了一个后台作业，对作业的操作我们后面再说。</p>
+                                                            <p>但我们会发现，如果此时终端被关闭后，进程还是会退出。这是因为，<code>&amp;</code> 符号只有让进程让出前台终端的功能，无法让进程不受 <code>SIGHUP</code> 信号的影响。</p>
+                                                            <h3 id="toc_9">nohup</h3>
+                                                            <p><code>nohup</code> 应该是另外一个我们常用的命令了，它的作用如其字面意思，使进程不受 <code>SIGHUP</code> 信号的影响。但我们在使用 <code>nohup php test.php</code> 后会发现，进程还会一直占用前台终端，但即使终端被关闭或连接断开了，程序还是会执行，另外我们会发现在当前文件夹下多了个名为 <code>nohup.out</code> 的文件。</p>
+                                                            <p>这是因为 nohup 的功能仅仅是让进程不受 <code>SIGHUP</code> 信号的影响，并不会让出前台终端，而且它还会在命令执行目录下建立 <code>nohup.out</code> 用以存储进程的输出。如果进程不需要输出，且不想让 nohup 创建文件，可以将标准输出和标准错误输出重定向。</p>
+                                                            <p>我们常将 <code>nohup</code> 和 <code>&amp;</code> 搭配到一块使用，执行命令如下 <code>nohup command &gt;/dev/null 2&gt;&amp;1 &amp;</code> 这样，就可以放心的等待进程运行结果了。</p>
+                                                            <h3 id="toc_10">setsid</h3>
+                                                            <p>setsid 是另一个让进程在后台执行的命令，它的作用是让进程打开一个新的会话并运行进程，使用方式为 <code>setsid command</code>。</p>
+                                                            <p>根据上面的概念我们得知终端关闭后进程退出是因为会话首进程向进程发送了 <code>SIGHUP</code> 信号，setsid 就厉害了，它直接打开一个新的会话来执行命令，那么原会话的终端的状态就再也不会影响到此进程了。</p>
+                                                            <p>我们使用 <code>pstree</code> 来查看使用 <code>setsid</code> 和 <code>nohup ... &amp;</code> 两种命令来运行进程时的进程树状态。</p>
+                                                            <ul>
+                                                            <li><code>nohup php test.php &amp;</code></li>
+                                                            </ul>
+                                                            <div>
+                                                            <pre class="line-numbers"><code class="language-none">pstree -a |grep -C 6 test
+                                                              |-sshd
+                                                              |   `-sshd
+                                                              |       `-sshd
+                                                              |           `-bash
+                                                              |               `-sudo -s
+                                                              |                   `-bash
+                                                              |                       |-grep -C 6 test
+                                                              |                       |-php test.php
+                                                              |                       `-pstree -a</code></pre>
+                                                            </div>
+                                                            <p>我是用 ssh 远程登陆的机器，所以 test.php 进程是挂在 sshd 进程下的。正常情况下，一旦 sshd 进程结束，则 test.php也无法幸免。</p>
+                                                            <ul>
+                                                            <li><code>setsid php test.php</code></li>
+                                                            </ul>
+                                                            <div>
+                                                                <pre class="line-numbers"><code class="language-none">pstree -a |grep -C 6 test
+                                                                  |-{nscd}
+                                                                  |-php test.php
+                                                                  |-php-fpm
+                                                                 --
+                                                                  |-sshd
+                                                                  |   `-sshd</code></pre>
+                                                                </div>
+                                                            <p>使用了 setsid 后，test.php 进程已经与 sshd 进程同级，属于 init 进程的子进程了。</p>
+                                                            <p>但是 setsid 并没有为进程分配一个输出终端，所以进程还是会输出到当前终端上。</p>
+                                                            <h4 id="toc_11">setsid的坑</h4>
+                                                            <p>另外，setsid 有个略坑的地方： 在终端中直接使用 <code>setsid command</code> 运行进程时，终端前台并不会被影响，command 会在后台默默运行。而在 shell 脚本中，我们会发现运行 setsid 的进程会一直阻塞住，直到 command 进程执行结束。</p>
+                                                            <p>这是因为，setsid 在其是进程组长时会 <code>fork()</code> 一个进程，但它不会 <code>wait()</code> 它的子进程，而是立刻退出，所以在终端内直接使用 setsid 时，setsid 作为进程组长不会占用终端界面。</p>
+                                                            <p>而在 shell 脚本内，setsid 不是进程组长，它不会 <code>fork()</code> 子进程，而是由 bash 来<code>fork()</code> 一个子进程，而 bash 会 <code>wait()</code> 子进程，所以表现得像 setsid 在 <code>wait()</code> 子进程一样。</p>
+                                                            <p>要解决这个问题，有两个办法：</p>
+                                                            <ul>
+                                                            <li>使用上面介绍的 <code>&amp;</code>符号，使 setsid 强行到后台执行。</li>
+                                                            <li>使用 <code>.</code> 或 <code>source</code> 命令由终端执行 setsid；</li>
+                                                            </ul>
+                                                            <h3 id="toc_12">其他</h3>
+                                                            <p>除了上面介绍的命令，还有 screen 和 tmux 等会话工具，他们都有自己的一套规范，也比较复杂，掌握本文的命令已经足够你驰骋 linux 进程控制了。当然有想了解新知识的可以查询学习一下，应该会比基础命令好用。</p>
+                                                            <h1 id="toc_13">作业命令</h1>
+                                                            <p>使用上面的后台执行命令时可能还会遇到一些小状况：</p>
+                                                            <ul>
+                                                            <li>被我们放在后台的进程执行时间过长，而我们又忘记使用 nohup 命令，那么终端一旦断开，进程又需要被重新执行。</li>
+                                                            <li>我们直接开启了某个进程，又想在不中断进程的情况下让它让出前台终端；</li>
+                                                            </ul>
+                                                            <p>这些都要牵涉到今天的第二个模块--作业；</p>
+                                                            <p>我们在终端里运行的命令都可以理解为一个作业，有的占用前台终端，有的在后台默默执行，下面的命令就是为了调度这些作业。</p>
+                                                            <h3 id="toc_14">jobs</h3>
+                                                            <p>jobs 是作业的基础命令，用它可以查看正在运行的作业的信息，其输出如下：</p>
+                                                            <div>
+                                                    <pre class="line-numbers"><code class="language-none">jobs
+                                                    [1]-  Running                 php test.php &amp;
+                                                    [2]+  Stopped                 php test.php</code></pre>
+                                                    </div>
+                                                            <p>前面<code>[ ]</code>内的数字是作业 ID，也是后面我们要操作作业的标识，然后是作业状态和命令。</p>
+                                                            <h3 id="toc_15">ctrl+z</h3>
+                                                            <p><code>ctrl+z</code> 严格来说并是作业命令，它只是向当前进程发送一个 <code>SIGSTOP</code> 信号，促使进程进入暂停(stopped)状态，此状态下，进程状态会被系统保存，此进程会被放置到作业队列中去，而让出进程终端。</p>
+                                                            <p>使用它，我们可以暂停正在占用终端的进程而不停止它，从而让我们使用终端命令来操作此进程。</p>
+                                                            <h3 id="toc_16">bg</h3>
+                                                            <p>bg是 <code>backgroud</code> 的缩写，顾名思义，<code>bg %id</code> 把作业放到后台进程中执行。</p>
+                                                            <p>结合 <code>ctrl+z</code> 和 <code>bg</code> 命令，我们可以解决上面提出的第一个问题，不停止地将正在占用终端的进程放到后台执行。</p>
+                                                            <h3 id="toc_17">fg</h3>
+                                                            <p>fg 与 bg 相对，使用它可以把作业放到前台来执行。</p>
+                                                            <h3 id="toc_18">disown</h3>
+                                                            <p>disown 用来将作业从作业列表中移除，即使它 <code>不属于</code> 会话，这样终端关闭后不再向此作业发送 <code>SIGHUP</code> 信号，以阻止终端对进程的影响。</p>
+                                                            <p>使用 disown 我们可以解决上面提出的第二个问题，不重新执行将一个没使用 nohup 命令的进程不受终端关闭影响。</p>
+                                                            <h1 id="toc_19">守护进程</h1>
+                                                            <p>以上介绍的都是一些临时进程的处理，后台运行的进程的最终方法是将进程变成守护进程。</p>
+                                                            <h3 id="toc_20">守护进程</h3>
+                                                            <blockquote>
+                                                            <p>守护进程(daemon)是生存期较长的一种进程，一般在系统启动时启动，系统关闭时停止，没有控制终端，也不会输出。如我们的服务器、fpm 等进程就是以守护进程的形式存在的。</p>
+                                                            </blockquote>
+                                                            <h3 id="toc_21">创建过程</h3>
+                                                            <p>要创建一个守护进程，步骤为：</p>
+                                                            <p>必选项</p>
+                                                            <ol>
+                                                            <li><code>fork</code> 子进程，退出父进程，子进程作为孤儿进程被 init 进程收养；</li>
+                                                            <li>使用 <code>setsid</code>, 打开新会话，进程成为会话组长，正式脱离终端控制；</li>
+                                                            <li>
+                                                            <p>设置信号处理（特别是子进程退出处理）；</p>
+                                                            <p>可选项：</p>
+                                                            </li>
+                                                            <li>
+                                                            <p>使用 <code>chdir</code> 改变进程工作目录，一般到根目录下，防止占用可卸载文件系统；</p>
+                                                            </li>
+                                                            <li>
+                                                            <p>用 <code>umask</code> 重设文件权限掩码，不再继承父进程的文件权限设置；</p>
+                                                            </li>
+                                                            <li>
+                                                            <p>关闭父进程打开的文件描述符；</p>
+                                                            </li>
+                                                            </ol>
+                                                            <h3 id="toc_22">代码</h3>
+                                                            <p>以下是 php 创建守护进程的伪代码，另外我的另一篇博客 <a href="#">初探PHP多进程</a> 也稍微介绍了一些相关内容：</p>
+                                                            <div>
+                                            <pre class="line-numbers"><code class="language-none">$pid = pcntl_fork();
+                                            if ($pid &gt; 0) {
+                                                exit; // 父进程直接退出
+                                            } elseif ($pid &lt; 0) {
+                                                throw_error(); // 进程创建失败
+                                            }
+
+                                            posix_setsid(); // setsid成为会话领导进程
+                                            chdir($dir); // 切换目录
+                                            umask(0); // 重置文件权限mask
+                                            close_fd(); // 关闭父进程的文件描述符
+                                            pcntl_signal($signal, $func); // 注册信号处理函数
+
+                                            while (true) {
+                                                do_job(); // 处理进程任务
+                                                pcntl_signal_dispatch(); // 分发信号处理
+                                            }</code></pre>
+                                        </div>
+                                                            <h1 id="toc_23">总结</h1>
+                                                            <p>linux 是开发者的基础技能，而进程的调度更是我们常用的功能，希望读完本文的同学们能有所收获。</p>
+                                                            <p>又有大半个月没发博客了，最近鼓捣着重构代码，经常会在一个点上纠结半天，不知不觉就加了个班。而且这个是个没法精确度量工作量和目标的活儿，优化没有尽头嘛。不过由于要更多地考虑一下代码的抽象、效率和扩展，对自己也是个挑战，算是乐在其中吧~</p>
+                                                            <p>最近可能会考虑写一个守护进程和 cron 进程调度器，嗯，希望给我算到工作量里，哈哈~想写的太多了，只怨自己还不够强大。。。</p>
+                                                            <p>如果您觉得本文对您有帮助，可以点击下面的 <strong>推荐</strong> 支持一下我。博客一直在更新，欢迎 <strong>关注</strong> 。</p>
+                                                            <p>参考：</p>
+                                                            <p><a href="#">setsid为什么会在脚本中阻塞-StackoOerflow</a></p>
+                                                            <p><a href="#">Linux 进程、进程组、会话周期、控制终端</a></p></div><div id="MySignature"></div>
+                                                            <div class="clear"></div>
+                                                            <div id="blog_post_info_block">
+
+                                                            <div id="BlogPostCategory">分类: <a href="#" target="_blank">LINUX</a></div>
+                                                            <div id="EntryTag">标签: <a href="#">linux</a>, <a href="#">进程</a>, <a href="#">作业</a>, <a href="#">后台运行</a>, <a href="#">守护进程</a>, <a href="#">Daemon</a></div>
+                                                            <div id="blog_post_info"><div id="green_channel">
+
+                                                                <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(7152327,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
+                                                                        <a id="green_channel_follow" onclick="follow('1e697f43-716d-e511-9fc1-ac853d9f53cc');" href="javascript:void(0);">关注我</a>
+                                                                <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+                                                                <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./Linux - 请允许我静静地后台运行 - 枕边书 - 博客园_files/icon_weibo_24.png" alt=""></a>
+                                                                <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./Linux - 请允许我静静地后台运行 - 枕边书 - 博客园_files/wechat.png" alt=""></a>
+                                                            </div>
+                                                            <div id="author_profile">
+                                                                <div id="author_profile_info" class="author_profile_info">
+                                                                        <a href="http://home.cnblogs.com/u/zhenbianshu/" target="_blank"><img src="./Linux - 请允许我静静地后台运行 - 枕边书 - 博客园_files/20160716164326.png" class="author_avatar" alt=""></a>
+                                                                    <div id="author_profile_detail" class="author_profile_info">
+                                                                        <a href="http://home.cnblogs.com/u/zhenbianshu/">枕边书</a><br>
+                                                                        <a href="http://home.cnblogs.com/u/zhenbianshu/followees">关注 - 13</a><br>
+                                                                        <a href="http://home.cnblogs.com/u/zhenbianshu/followers">粉丝 - 173</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="clear"></div>
+                                                                <div id="author_profile_honor"></div>
+                                                                <div id="author_profile_follow">
+                                                                            <a href="javascript:void(0);" onclick="follow('1e697f43-716d-e511-9fc1-ac853d9f53cc');return false;">+加关注</a>
+                                                                </div>
+                                                            </div>
+                                                            <div id="div_digg">
+                                                                <div class="diggit" onclick="votePost(7152327,'Digg')">
+                                                                    <span class="diggnum" id="digg_count">24</span>
+                                                                </div>
+                                                                <div class="buryit" onclick="votePost(7152327,'Bury')">
+                                                                    <span class="burynum" id="bury_count">2</span>
+                                                                </div>
+                                                                <div class="clear"></div>
+                                                                <div class="diggword" id="digg_tips">
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                            <div class="clear"></div>
+                                                            <div id="post_next_prev"><a href="#" class="p_n_p_prefix">« </a> 上一篇：<a href="#" title="发布于2017-06-21 20:31">空间索引 - 四叉树</a><br><a href="#" class="p_n_p_prefix">» </a> 下一篇：<a href="#" title="发布于2017-07-17 20:29">小时到分钟 - 一步步优化巨量关键词的匹配</a><br></div>
+                                                            </div>
+
+
+                                            </div>
+                                        <div class="postDesc">posted @ <span id="post-date">2017-07-11 20:22</span> <a href="#">枕边书</a> 阅读(<span id="post_view_count">4981</span>) 评论(<span id="post_comment_count">18</span>)  <a href="#" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(7152327);return false;">收藏</a></div>
+                                        </div>
+                                    </div><!--end: topics 文章、评论容器-->
+                            </div>
+
+	                    </div>
+                    </div>
+
+                </div>
+                {# -----end: mainContent 主容器------end#}
+
+                <div class="blog-aside col-md-4 ">
+
+                    <div class="aside-widget">
+                        <header>
+                            <h3>公告</h3>
+                        </header>
+                        <div class="blong-new">
+
+
+
+                            <div style=" padding: 13px; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif; font-size: 15px; line-height: 1.8; background: #fff; color: #7e8c8d; border-bottom: 1px solid rgb(222, 222, 222)">
+                                 欢迎来到我的博客~<br/>
+                                我是个人详情
+                                我是个人详情
+                                我是个人详情
+                                我是个人详情
+                                 我是个人详情
+                                我是个人详情
+                                我是个人详情
+
+                                </div>
+                            <div id="profile_block">
+                                昵称：<a href="#">枕边书</a>
+                                <br>园龄：
+                                    <a href="#" title="入园时间：2015-10-08">1年9个月</a>
+                                <br>荣誉：
+                                    <a href="#">推荐博客</a>
+                                <br>粉丝：<a href="#">175</a><br>关注：
+                                <a href="#">13</a>
+
+{#                                <a href="javascript:void(0);" onclick="follow('1e697f43-716d-e511-9fc1-ac853d9f53cc')">+加关注</a>#}
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="aside-widget">
+                        <header>
+                            <h3>随笔分类</h3>
+                        </header>
+                        <div class=" catListPostCategory sidebar-block ">
+                            <ul>
+
+                                <li><a id="CatList_LinkList_0_Link_0" href="#">C/C++(4)</a> </li>
+
+                                <li><a id="CatList_LinkList_0_Link_1" href="#">JS(2)</a> </li>
+
+                                <li><a id="CatList_LinkList_0_Link_2" href="#">LINUX(4)</a> </li>
+
+                                <li><a id="CatList_LinkList_0_Link_3" href="#">PHP(19)</a> </li>
+
+                                <li><a id="CatList_LinkList_0_Link_4" href="#">Profession(3)</a> </li>
+
+                                <li><a id="CatList_LinkList_0_Link_5" href="#">WEB(3)</a> </li>
+
+                                <li><a id="CatList_LinkList_0_Link_6" href="#">后端(7)</a> </li>
+
+                                <li><a id="CatList_LinkList_0_Link_7" href="#">算法(4)</a> </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="aside-widget catListComment">
+                        <header>
+                        <h3 >最新评论</h3>
+                        </header>
+                        <div id="RecentCommentsBlock">
+                                <ul>
+                                <li class="recent_comment_title"><a href="#">1. Re:Linux - 请允许我静静地后台运行</a></li>
+                                <li class="recent_comment_body">@枕边书谢谢哥...</li>
+                                <li class="recent_comment_author">--橙木鱼</li>
+                                <li class="recent_comment_title"><a href="#">2. Re:Linux - 请允许我静静地后台运行</a></li>
+                                <li class="recent_comment_body">@橙木鱼有机会会写的。资料的话，我最近在看《重构 改善既有代码的设计》一书，看了四分之三了。书偏重于小块、部分代码的重构，比较系统，代码优化经验不多的话可以一看。...</li>
+                                <li class="recent_comment_author">--枕边书</li>
+                                <li class="recent_comment_title"><a href="#">3. Re:Linux - 请允许我静静地后台运行</a></li>
+                                <li class="recent_comment_body">哥 能谈谈重构吗 推荐点资料也好</li>
+                                <li class="recent_comment_author">--橙木鱼</li>
+                                </ul>
+                        </div>
+                    </div>
+
+                    <div class="aside-widget">
+                        <header>
+                            <h3>标签</h3>
+                        </header>
+                        <div class="body clearfix">
+                            <ul class="tags">
+                                <li><a href="#">HTML5</a></li>
+                                <li><a href="#">CSS3</a></li>
+                                <li><a href="#">COMPONENTS</a></li>
+                                <li><a href="#">TEMPLATE</a></li>
+                                <li><a href="#">PLUGIN</a></li>
+                                <li><a href="#">BOOTSTRAP</a></li>
+                                <li><a href="#">TUTORIAL</a></li>
+                                <li><a href="#">UI/UX</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+                {# -----end:   blog-aside 侧栏容器------end#}
+
+    </div>
+{#   大容器------end#}
+
+    <footer>
+
+        <div id="footer">
+                Copyright 2017 More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">FigGG</a> - Collect from <a href="#" title="FigGG" target="_blank">作者</a>
+        </div>
+                </footer>
+    {#    页脚------end#}
+
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+<script src="{% static 'js/modernizr.js'%}"></script>
+
+</body>
+</html>
