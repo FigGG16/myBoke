@@ -107,8 +107,7 @@ class ArticleClassView(View):
 class ArticleDetailView(View):
 
     def get(self,request,category_list_id):
-
-        Article_count=Article.objects.count();
+        Article_count=Article.objects.count()
         #计算当前文章的上下文章
         if int(category_list_id) ==Article_count and int(category_list_id)!=1:
             next_Artcles =Article.objects.get(id=(int(category_list_id) - 1))

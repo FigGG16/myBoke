@@ -82,5 +82,5 @@ urlpatterns = [
 
 ]
 #配置全局404页面
-handler404 = 'users.views.page_nont_found'
-handler500 = 'users.views.page_error'
+# handler404 = 'users.views.page_nont_found'
+# handler500 = 'users.views.page_error'

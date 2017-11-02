@@ -37,10 +37,13 @@ SECRET_KEY = 'm50szy4)60j^qu!@do*np8685u5b8@5mk#kg%#(t%z19jdm_8)'
 
 #
 STATIC_ROOT= '/static/'
-# DEBUG = True
+#DEBUG = True
 # ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.huangfeixiang.com']
+
 DEBUG = False
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.huangfeixiang.com']
+ALLOWED_HOSTS = ['*']
+
 
 
 #邮箱登录
@@ -76,7 +79,8 @@ INSTALLED_APPS = [
 
     #markdown编辑
     'markdownx',
-    'rest_framework'
+    'rest_framework',
+    # 'gunicorn'
 ]
 
 #重载django默认的user表
